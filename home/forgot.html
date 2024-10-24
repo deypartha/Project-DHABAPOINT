@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(bg.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .login_form{
+            border: 1px solid #fff;
+            padding: 50px;
+            height: 550px;
+            width: 600px;
+            font-size: 20px;
+            border-radius: 20px;
+            text-align: center;
+            color: #fff;
+            backdrop-filter: blur(10px);
+            background-color: rgb(79, 82, 81);
+            background: transparent;
+        }
+        .login_form h2{
+            display: inline;
+            padding-bottom: 50px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .login_form:hover{
+            box-shadow: 2px 2px 5px 5px #fff;
+        }
+        .remember{
+            font-size: 17px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        #user{
+            height: 40px;
+            width: 300px;
+            font-size: 17px;
+            margin-top: 50px;
+            background-color: rgba(255, 255, 255, 0.162);
+            text-decoration: none;
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 10px;
+            color: #fff;
+            padding: 10px;
+        }
+        #user::placeholder{
+            color: #fff;
+        }
+        #pass{
+            height: 40px;
+            width: 300px;
+            font-size: 17px;
+
+            background-color: rgba(255, 255, 255, 0.162);
+            text-decoration: none;
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 10px;
+            color: #fff;
+            padding: 10px;
+        }
+        #pass::placeholder{
+            color: #fff;
+        }  
+        #newPass{
+            height: 40px;
+            width: 300px;
+            font-size: 17px;
+
+            background-color: rgba(255, 255, 255, 0.162);
+            text-decoration: none;
+            border: none;
+            border-bottom: 1px solid #fff;
+            border-radius: 10px;
+            color: #fff;
+            padding: 10px;
+        }
+        #newPass::placeholder{
+            color: #fff;
+        } 
+        .btn{
+            background-color: rgb(68, 133, 2);
+            color: #fff;
+        }
+        .btn a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+    
+    </style>
+</head>
+<body>
+        <div class="login_form">
+
+            <h2>Forgot Password</h2>
+    <form id="formDemo">
+        <label for="user">Username: </label>
+        <input type="username" name="email" id="user" type="email" placeholder="Enter your name" required>
+        <div id="Uerror" style="color:rgb(250, 112, 90); font-size: 12px;"></div>
+        <br><br>
+        <label for="pass">New Password: </label>
+        <input type="password" name="" id="pass" minlength="8" placeholder="Enter password">
+        <div id="Perror" style="color:red;"></div>
+        <br><br>
+        <label for="newPass">Confirm Password: </label>
+        <input type="password" name="" id="newPass" minlength="8" placeholder="Enter password">
+        <div id="Cerror" style="color:red;"></div>
+        <br><br>
+        <div class="remember">
+        </div>
+        <br>
+        <button class="btn fs-5" type="submit">Submit</button>
+    </form> 
+            </div>
+        </div>
+    </div>
+    <script>
+        function checkLoginDetails() {
+            const form = document.getElementById('formDemo');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();  
+                const user = document.getElementById('user').value.trim();
+                const pass = document.getElementById('pass').value.trim();
+                const errors = {
+                    user: '',
+                    pass: ''
+                };
+                let isValid = true;
+                const userPatt = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!user) {
+                    errors.user = 'Username is required';
+                    isValid = false;
+                } else if (!userPatt.test(user)) {
+                    errors.user = 'Enter this {abc123@gmail.com} format';
+                    isValid = false;
+                }
+                if (!pass) {
+                    errors.pass = 'Password is required';
+                    isValid = false;
+                } else if (pass.length < 6) {
+                    errors.pass = 'Password length must be at least 6 characters';
+                    isValid = false;
+                }
+                document.getElementById('Uerror').textContent = errors.user;
+
+                if (isValid) {
+                    fetch('http://localhost:3001/users')
+                        .then(response => response.json())
+                        .then(users => {
+                            const foundUser = users.find(u => u.email === user);
+
+                            if (foundUser) {
+                                const newPassword = document.getElementById('newPass').value.trim();
+
+                                if (newPassword && newPassword.length >= 6) {
+                                    foundUser.password = newPassword;
+                                    fetch(`http://localhost:3001/users${foundUser.id}`, {
+                                        method: 'PUT',
+                                        headers: {
+                                            'Content-Type': 'application/json'
+                                        },
+                                        body: JSON.stringify(foundUser)
+                                    })
+                                    .then(() => {
+                                        alert('Password updated successfully!. . .');
+                                        window.location.href = 'login.html';
+                                    })
+                                    .catch(error => {
+                                        console.error('Error updating password:', error);
+                                        alert('An error occurred while updating the password. Please try again.');
+                                    });
+                                } else {
+                                    alert('New password must be at least 6 characters long.');
+                                }
+                            } else {
+                                alert('Invalid Username or Password. Please try again.');
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            alert('An error occurred while trying to log in. Please try again later.');
+                        });
+                }
+            });
+        }   
+        document.addEventListener('DOMContentLoaded', checkLoginDetails);
+
+        </script>
+</body>
+</html>

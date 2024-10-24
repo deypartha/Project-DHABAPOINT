@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgb(49, 24, 72);
+        }
+        .container{
+            text-align: center;
+            height: 100%;
+            width: 100%;
+            color: aliceblue;
+            font-size: 25px;
+        }
+        .container#body.active{
+            filter: blur(20px);
+            pointer-events: none;
+            user-select: none;
+        }
+        #popup{
+            position: fixed;
+            text-align: center;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 800px;
+            height: 600px;
+            font-size: 30px;
+            padding: 50px;
+            background-color: aliceblue;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        #popup.active{
+            top: 50%;
+            visibility: visible;
+            opacity: 1;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="body">
+        <div class="content">
+            <h1>Hello World</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis facere error fuga illo in perferendis nam sint voluptatibus tempore. Assumenda ex quibusdam praesentium quidem ad amet nisi ipsum, doloribus eaque?
+            Cupiditate, odio quas impedit mollitia eius ipsam dolores recusandae tenetur officia animi magni soluta, ullam debitis dolorem nisi harum in quia ab sint cumque eaque blanditiis vero minima? Fuga, magni?
+            Minus, numquam quisquam! Molestias at maiores id tempore optio magni asperiores facere repellat architecto, eaque necessitatibus quos, rerum a? Ipsa impedit quod numquam distinctio cum magni quidem praesentium nemo sint.
+            Sint quis ab aliquid, enim nemo vitae illo maxime incidunt maiores? Veritatis nemo molestias nulla, minima nihil ullam id molestiae quaerat, sunt fugit quo earum laboriosam commodi harum voluptates eum!
+            At enim amet hic, asperiores iste temporibus architecto molestias esse voluptatum deserunt ipsum dolorum, consectetur dignissimos rerum officia totam pariatur nesciunt fugit itaque? Velit at quo omnis, obcaecati quisquam voluptatem!</p>
+            <button onclick="toggle()">click</button>
+        </div>
+    </div>
+    <div id="popup">
+        <h2>Namastey Dunia</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates vero fuga laudantium, deleniti labore nisi quos ducimus alias eligendi voluptatibus aliquid quod tempore. Recusandae veritatis commodi in magni ex modi!
+        Ex error quidem provident pariatur ullam, reprehenderit eaque eligendi, doloribus tempore est tenetur veniam molestiae, hic iure esse perspiciatis velit corrupti veritatis laborum expedita quae aliquid neque. Ullam, temporibus dolorem.
+        Aspernatur sed necessitatibus qui nemo unde commodi quo praesentium dignissimos hic doloremque illum ad, molestias quis veritatis eius enim laborum, perspiciatis odit alias minus dolores ea nesciunt. Cum, veniam blanditiis?
+        </p>        
+        <button onclick="toggle()">close</button>
+    </div>
+    <script type="text/javascript">
+        function toggle(){
+          var body1 = document.getElementById("body")
+          body1.classList.toggle('active')
+          var popup = document.getElementById("popup")
+          popup.classList.toggle('active')
+        }
+      </script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="zm.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/27e6a2b710.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 20px;
+        }
+        .menu-category {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .item-container1 {
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            width: 250px;
+        }
+        .cart {
+            margin-top: 30px;
+            border-top: 2px solid #000;
+            padding-top: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+        }
+        .cart h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        #cart-items {
+            margin-bottom: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+        #total-price {
+            color: #28a745; 
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: #007bff; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0056b3; 
+        }
+        .searchBox {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .search-input {
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            outline: none;
+        }
+        .search-input:focus {
+            border-color: #007bff; 
+        }
+        .example button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .example button i {
+            color: #007bff; 
+        }
+        .example button:hover i {
+            color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md bg">
+           <div class="ddd1">
+              <a class="navbar-brand" href="#"><img src="foodd.png" alt="" height="60px" width="70px"></a>
+              <h2 class="nav-h2">𝕯𝖍𝖆𝖇𝖆𝕻𝖔𝖎𝖓𝖙</h2>
+           </div>
+           <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#btn">
+           <i class="bx bx-menu menu"></i>
+           </button>
+           <div class="collapse navbar-collapse" id="btn">
+              <ul class="navbar-nav ms-auto">
+                 <li class="nav-item">
+                    <a href="project.html" class="nav-link mx-3 fs-5 text">Home</a>
+                 </li>
+                 <li class="nav-item">
+                    <a href="z.html" class="nav-link mx-3 fs-5 text" style="background-color: brown; color: #fff;" active>Menu</a>
+                 </li>
+                 <li class="nav-item">
+                    <a href="p.about.html" class="nav-link mx-3 fs-5 text">About Us</a>
+                 </li>
+                 <li class="nav-item">
+                    <a href="login.html" class="nav-link mx-3 fs-5 text">Login</a>
+                 </li>
+              </ul>
+           </div>
+        </nav>
+     </div>
+
+    <div class="flex-container mt-4">
+        <div class="flex-item-right hover1">
+            <div><img src="./all meal.png" style="font-size: 100px;" width="160px" height="100px"></div>
+            <div class="h2"><a href="#all" style="text-decoration: none;">All Meals</a></div>
+        </div>
+        <div class="flex-item-left hover1">
+            <div><i class="fa-solid fa-mug-saucer" style="font-size: 100px;"></i></div>
+            <div class="h2"><a href="#breakfast" style="text-decoration: none;">Breakfast</a></div>
+        </div>
+        <div class="flex-item-right hover1">
+            <div><img src="luncch.jpg" style="font-size: 100px;" width="160px" height="80px"></div>
+            <div class="h2"><a href="#lunch" style="text-decoration: none;">Lunch</a></div>
+        </div>
+        <div class="flex-item-right hover1">
+            <div><img src="./menudinner.jpg" style="font-size: 100px;" width="160px" height="100px"></div>
+            <div class="h2"><a href="#dinner" style="text-decoration: none;">Dinner</a></div>
+        </div>
+    </div>
+
+    <div class="cart">
+        <h2>Order Cart</h2>
+        <div id="cart-items"></div>
+        <div>
+            <strong>Total Price: $<span id="total-price">0.00</span></strong>
+        </div>
+        <button id="proceed-button" class="btn btn-primary mt-3" style="display: none;">Proceed to Payment</button>
+    </div>
+
+    
+    <div class="searchBox" style="float: right;">
+        <form class="example" onsubmit="return false;">
+            <input type="text" placeholder="Search.." name="search" style="margin:auto;max-width:150px" id="searchbox" class="search-input" data-search>
+            <button type="submit" style="margin:auto;max-width:50px"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+
+    <br><br><hr>
+
+    <div class="menu-category" style="margin-left: 80px;">
+        <div id="breakfast" class="menu-category"></div>
+        <div id="lunch" class="menu-category"></div>
+        <div id="dinner" class="menu-category"></div>
+    </div>
+    
+    <!-- This div is where search results will be displayed -->
+    <div id="search-results" class="menu-category"></div>
+    
+    <div class="row" id="bb"> 
+        <button id="showMoreBtn" style="display: none;" onclick="showMore()">Show More</button>
+        <button id="showLessBtn" style="display: none;" onclick="showLess()">Show Less</button>
+    </div>
+    
+    
+    <script src="z.js"></script> 
+</body>
+</html>

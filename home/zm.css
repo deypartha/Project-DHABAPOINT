@@ -1,0 +1,222 @@
+.hover1 {
+
+    transition: transform 0.3s ease;
+  }
+  
+  .hover1:hover {
+    transform: scale(1.1);
+   /* color: rgb(236, 100, 10);*/
+    border-radius: 15px;
+  }
+  
+
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 30px;
+    text-align: center;
+    gap: 30px 20px;
+  }
+
+
+body {
+    background-color: #f1e8ec;
+}
+
+.item-container1 {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.item-container1 img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; 
+    border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.buttonrate {
+    background-color: rgb(123, 123, 227);
+    height: 40px;
+    width: 60px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-offer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+}
+
+.price-offer h2 {
+    margin: 0;
+}
+
+.add-to-cart {
+    margin-top: 10px;
+    background-color: #438de7;
+    color: rgb(247, 242, 242);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #ed8608;
+    border: 2px solid black;
+    color: black;
+}
+
+.item-container1:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+#h1{
+    color:#ed8608;
+}
+
+
+/*dnknd*/
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+.item-wrapper {
+  margin: 15px; /* Space around each item */
+  display: flex; /* Align items properly */
+  justify-content: center; /* Center the items within their column */
+}
+
+.item-container1 {
+  border: 1px solid #ddd; /* Optional: add a border */
+  padding: 10px; /* Padding inside item container */
+  border-radius: 8px; /* Optional: rounded corners */
+  background-color: #fff; /* Background color for items */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+
+.zoo:hover img{
+  transform: scale(1.2);
+}
+.zoo{
+  overflow: hidden;
+}
+.zoo{
+  object-fit: cover;
+  transform: transform 0.5;
+  height: 100%;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0; /* Spacing between cart items */
+}
+
+.cart-item .circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ccc; /* Circle color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; /* Spacing between circle and text */
+  font-weight: bold; /* Make the letter bold */
+}
+
+.cart-item img {
+  width: 50px; /* Width of the item image */
+  height: auto; /* Maintain aspect ratio */
+  margin-top: 5px; /* Space between text and image */
+}
+
+.cart-item button {
+  margin-left: 5px; /* Space between buttons */
+  cursor: pointer; /* Change cursor to pointer for buttons */
+}
+
+
+.cart-item img {
+  width: 50px; /* Width of the circular image */
+  height: 50px; /* Height should be equal to width */
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image covers the entire circle */
+  margin-left: 10px; /* Space between the text and the image */
+}
+
+
+#showMoreBtn, #showLessBtn {
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+#showMoreBtn:hover, #showLessBtn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+#showMoreBtn:disabled, #showLessBtn:disabled {
+  background-color: #ccc; /* Gray color for disabled state */
+  cursor: not-allowed;
+}
+#bb{
+  margin: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}

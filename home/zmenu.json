@@ -1,0 +1,254 @@
+{
+    "breakfast": [
+        {
+            "id": 1,
+            "name": "Aloo Pratha",
+            "price": 25,
+            "discount": 15
+           
+        },
+        {
+            "id": 2,
+            "name": "Atta Dosa",
+            "price": 22,
+            "discount": 15
+        },
+        {
+            "id": 3,
+            "name": "Bhindi Do Pyaza",
+            "price": 34,
+            "discount": 5
+        },
+        {
+            "id": 4,
+            "name": "Chese Dosa",
+            "price": 9.3,
+            "discount": 12
+        },
+        {
+            "id": 5,
+            "name": "Dal Pratha",
+            "price": 15,
+            "discount": 10
+        },
+        {
+            "id": 6,
+            "name": "Egg Sandwich",
+            "price": 3,
+            "discount": 15
+        },
+        {
+            "id": 7,
+            "name": "Khaja",
+            "price": 2,
+            "discount": 15
+        },
+        {
+            "id": 8,
+            "name": "Litta Chokha",
+            "price": 1.2,
+            "discount": 15
+        },
+        {
+            "id": 9,
+            "name": "Malpua",
+            "price": 1.5,
+            "discount": 15
+        },
+        {
+            "id": 10,
+            "name": "Masala Dosa",
+            "price": 1.7,
+            "discount": 15
+        },
+        {
+            "id": 11,
+            "name": "Palk Paratha",
+            "price": 1.7,
+            "discount": 15
+        },
+        {
+            "id": 12,
+            "name": "Upma",
+            "price": 12.8,
+            "discount": 21
+        }
+    ],
+    
+    "dinner": [
+        {
+            "id": 1,
+            "name": "Beans Poriyal",
+            "price": 23.4,
+            "discount": 20
+        },
+        {
+            "id": 2,
+            "name": "Cauliflower Curry",
+            "price": 23.4,
+            "discount": 20
+        },{
+            "id": 3,
+            "name":"Masala Dosa" ,
+            "price":39.0,
+            "discount":15
+        },{
+            "id": 4,
+            "name":"Mushroom Biryani" ,
+            "price":39.0,
+            "discount":15
+        },{
+            "id":5,
+            "name":"Oats Upma" ,
+            "price":39.0,
+            "discount":15
+        },
+        {
+            "id":6, 
+            "name":"Dal Tadka" ,
+            "price":39.0,
+            "discount":15
+        },
+        {
+            "id":7,
+            "name":"Palak paneer" ,
+            "price":39.0,
+            "discount":15
+        },
+        {
+            "id":8,
+            "name":"Pav bhaji" ,
+            "price":39.0,
+            "discount":15
+        },
+        {
+            "id":9,
+            "name":"shahi paneer with naan" ,
+            "price":39.0,
+            "discount":15
+        },
+        {
+            "id":10,
+            "name":"Chana masala" ,
+            "price":39.0,
+            "discount":15
+        }
+    ],
+    "Lunch":[
+        { 
+            "id": 1,
+            "name": "Aloo Tikki",
+            "price": 23.4,
+                "discount": 20
+
+        },
+        {
+            
+            "id": 2,
+            "name": "Biryani",
+            "price": 23.4,
+            "discount": 20
+
+        },
+        {
+            
+            "id": 3,
+            "name": "Chole Bhature",
+            "price": 23.4,
+            "discount": 20
+        },
+        {
+            
+            "id": 4,
+            "name": "Dahi Puri",
+            "price": 23.4,
+            "discount": 20
+        },{
+            
+            "id": 5,
+            "name": "Dal Makhani",
+            "price": 23.4,
+            "discount": 20
+        },
+        {
+            
+            "id": 6,
+            "name": "South indian raita",
+            "price": 23.4,
+            "discount": 20
+        },
+        {
+            
+            "id": 7,
+            "name": "Chicken Fry",
+            "price": 23.4,
+            "discount": 20
+        },
+        {
+            
+            "id": 8,
+            "name": "Lamb chops",
+            "price": 13.4,
+            "discount": 20
+        },
+        {
+            
+            "id": 9,
+            "name": "Murgh dum biryani",
+            "price": 23.4,
+            "discount": 20
+        },
+        {
+            
+            "id": 10,
+            "name": "Fish Pakora",
+            "price": 23.4,
+            "discount": 20
+        }    ,
+        {
+            
+            "id": 11,
+            "name": "Fish makhani",
+            "price": 21.4,
+            "discount": 0
+        }  
+        ,
+        {
+            
+            "id": 12,
+            "name": "Butter Chicken",
+            "price": 24.0,
+            "discount": 0
+        } ,
+        {
+            
+            "id": 13,
+            "name": "Dahi Puri",
+            "price": 21.4,
+            "discount": 0
+        } ,
+        {
+            
+            "id": 14,
+            "name": "Chole Bhature",
+            "price": 21.4,
+            "discount": 0
+        } ,
+        {
+            
+            "id": 15,
+            "name": "Masala Dosa Recipe",
+            "price": 21.4,
+            "discount": 0
+        } 
+        ,{
+            
+            "id": 16,
+            "name": "chicken  biryani",
+            "price": 21.4,
+            "discount": 0
+        } 
+        
+        
+    ]
+}

@@ -1,0 +1,330 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  /* .start{
+    border: 1px solid red;
+    position: fixed;
+  } */
+  .text:hover{
+    text-decoration: underline 2px rgb(91, 223, 192);
+    text-underline-offset: 10px;
+    background-color: brown;
+    color: #fff;
+  }
+  .ddd1 {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+  }
+  .text {
+    color: black;
+  }
+  .image_back {
+    position: relative;
+  }
+  .image_back h1 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-size: 50px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+  }
+  .third{
+    height: 500px;
+    padding: 50px;
+    font-size: 18px;
+  }
+  .forth{
+    height: auto;
+    background-color: #212121;
+    width: 100%;
+    color: #fff;
+  }
+  .contact{
+    padding: 100px;
+    font-size: 20px;
+  }
+  #form{
+    align-items: center;
+  }
+  label{
+    font-size: 20px;
+  }
+  input #name{
+    background-color: #212121;
+  }
+  #name{
+    font-size: 20px;
+    background-color: #212121;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    border-right: #fff;
+  }
+  
+  input #email{
+    background-color: #212121;
+  }
+  #email{
+    font-size: 20px;
+    background-color: #212121;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    border-right: #fff;
+  }
+  #text{
+    font-size: 20px;
+    background-color: #212121;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #fff; 
+  }
+  #number{
+    font-size: 20px;
+    background-color: #212121;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid #fff; 
+    border-right: #fff;
+  }
+  .last_row{
+    display: grid;
+    grid-template-areas: "element0 element1 element2 element3"
+                        "copy copy copy copy";
+    height: 20vh;
+    padding-top: 50px;
+    }
+    .last{
+        height: 250px;
+        background-color: #212121;
+        color: #fff;
+    }
+    .last_row div{
+        background-color: #212121;
+        color: #fff;
+    }
+    .element0{
+        grid-area: element0;
+    }
+    .element1{
+        grid-area: element1;
+    }
+    .element2{
+        grid-area: element2;
+    }
+    .element3{
+        grid-area: element3;
+    }
+    .copy{
+        grid-area: copy;
+    }
+    @media(max-width: 600px){
+        .last_row{
+            grid-template-areas: "element0 element1 element2 element3"
+                            "copy copy copy copy";
+        }
+    }
+    @media (min-width: 600px) and (max-width: 1000px) {
+        .cont{
+            grid-template-areas: "element0 element1 element2 element3"
+                            "copy copy copy copy";
+        }
+    }
+    .rating{
+      display: grid;
+      height: 100%;
+      place-items: center;
+    }
+    #react{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 350px;
+      border: 1px solid gray;
+    }
+    .container .star-widget input{
+      display: none;
+    }
+    .head{
+      padding: 10px;
+      text-align: center;
+    }
+    .star-widget label{
+      font-size: 30px;
+      color: #444;
+      padding: 5px;
+      float: right;
+      transition: all 0.2 ease;
+    }
+    .star-widget input:not(:checked)~ label:hover,
+    input:not(:checked)~ label:hover,label{
+      color: #fd4;
+    }
+    input:checked~label{
+      color: #fd4;
+    }
+    input #rate-5:checked~label{
+      color: #fd7;
+      text-shadow: 0 0 20px 952px;
+    }
+    input#rate-1:checked ~ form header:before{
+      content: "I hate this ! 😑";
+    }
+    input#rate-2:checked ~ form header:before{
+      content: "I don't like it ! 🤨";
+    }
+    input#rate-3:checked ~ form header:before{
+      content: "I like this ! 😊";
+    }
+    input#rate-4:checked ~ form header:before{
+      content: "I just love it ! 😍";
+    }
+    input#rate-5:checked ~ form header:before{
+      content: "It's Awesome ! 🥳";
+    }
+    body {
+      font-family: Arial, sans-serif;
+  }
+  
+  /* Container styling for the team section */
+  .choose_bg {
+      padding: 50px 0;
+      background-color: #f4f4f4;
+  }
+  
+  .white_bg {
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* For box styling */
+  .for_box {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 30px;
+  }
+  #boxx{
+    height: 350px;
+    width: 300px;
+    text-align: center;
+    color: #212121;
+    border: 1px solid #ddd;
+    line-height: 30px;
+  }
+  .for_box h3 {
+      margin-top: 15px;
+      font-size: 25px;
+      font-weight: bold;
+  }
+  
+  .for_box p {
+      font-size: 14px;
+      color: #777;
+  }
+  
+  /* Icon Styling */
+  .for_box i {
+      font-size: 48px;
+      color: #007bff;
+  }
+
+  /* Button styling */
+  .btn-outline-danger {
+      color: #dc3545;
+      border-color: #dc3545;
+      padding: 10px 20px;
+      font-size: 16px;
+  }
+  #btn{
+    text-align: center;
+  }
+  .btn-outline-danger:hover {
+      background-color: #dc3545;
+      color: white;
+  }
+  
+  /* Modal styling */
+  .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  #modal-content {
+      background-color: white;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  #close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+  }
+  
+  #close:hover,
+  #close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  
+  /* Team member styling */
+  .team-member {
+      margin-bottom: 20px;
+  }
+  
+  .team-member-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+  }
+  
+  .team-member h3 {
+      font-size: 28px;
+      margin-bottom: 5px;
+  }
+  
+  .team-member p {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #555;
+  }
+  
+  .team-member a {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 14px;
+      color: #007bff;
+      text-decoration: none;
+  }
+  
+  .team-member a:hover {
+      text-decoration: underline;
+  }
